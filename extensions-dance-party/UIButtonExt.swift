@@ -18,4 +18,22 @@ extension UIButton {
         wiggleAnim.toValue = CGPoint(x: self.center.x + 20.0, y: self.center.y + 1.0)
         layer.add(wiggleAnim, forKey: "position")
     }
+    
+    func dim() {
+        UIView.animate(withDuration: 0.15, animations: {
+            self.alpha = 0.5
+        }) { (finished) in
+            UIView.animate(withDuration: 0.15, animations: {
+                self.alpha = 1.0
+            })
+        }
+    }
+    
+    func colorize() {
+        let randomNumArr = genRands(quant: 3)
+        let randomColor = UIColor(red: randomNumArr[0]/255, green: randomNumArr[1]/255, blue: randomNumArr[2]/255, alpha: 1.0)
+        UIView.animate(withDuration: 0.3) {
+            self.backgroundColor = randomColor
+        }
+    }
 }

@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func colorizeBtnPress(_ sender: Any) {
+        colorizeButton.colorize()
     }
     
     @IBAction func wiggleBtnPress(_ sender: Any) {
@@ -28,6 +29,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func dimBtnPRess(_ sender: Any) {
+        dimButton.dim()
     }
     
 }
