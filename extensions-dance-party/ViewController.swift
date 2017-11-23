@@ -10,16 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var colorizeButton: UIButton!
+    
+    @IBOutlet weak var wiggleButton: UIButton!
+    
+    @IBOutlet weak var dimButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func colorizeBtnPress(_ sender: Any) {
     }
-
-
+    
+    @IBAction func wiggleBtnPress(_ sender: Any) {
+        wiggleButton.wiggle()
+    }
+    
+    @IBAction func dimBtnPRess(_ sender: Any) {
+    }
+    
 }
 
